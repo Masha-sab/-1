@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Сорта кофе | Атлас кофе</title>
+</head>
+<body id="top">
+<header>
+  <a href="index.html">Атлас кофе</a>
+  <p>Учебный сайт о кофе</p>
+</header>
+<nav aria-label="Главное меню">
+  <a href="index.html"><img src="images/coffee-small.jpg" width="60" alt="На главную"></a><br>
+  <a href="index.html">Главная</a> ·
+  <a href="menu.html" aria-current="page"><b>Сорта кофе</b></a> ·
+  <a href="gallery.html">Галерея</a> ·
+  <a href="contacts.html">Контакты</a> ·
+  <a href="dom.html">Чтение DOM</a> ·
+  <a href="passport.html">Паспорт</a> ·
+  <a href="task.html">Задача 1010</a> ·
+  <a href="menu.html#order">Корзина</a> ·
+  <a href="https://varieties.worldcoffeeresearch.org/" target="_blank" rel="noopener">Каталог WCR ↗</a>
+</nav>
+<main>
+  <h1>Сорта кофе</h1>
+  <p><a href="#types">Виды и разновидности</a> · <a href="#comparison">Сравнение</a> · <a href="#order">Корзина</a></p>
+  <h2 id="comparison">Сравнение разновидностей арабики</h2>
+  <p>В таблице собраны особенности растений. На вкус кофе также влияют место выращивания, обработка и обжарка.</p>
+  
+  <table border="1" cellpadding="10" background="images/table-background.jpg">
+    <caption>Типика, Бурбон и Катурра</caption>
+    <tr><th scope="col">Разновидность</th><th scope="col">Особенность растения</th><th scope="col">Фотография</th><th scope="col">В корзину</th></tr>
+    <tr>
+      <td>Типика</td>
+      <td>Высокорослая разновидность арабики.</td>
+      <td><a href="images/typica.jpg" target="_blank" rel="noopener"><img src="images/typica.jpg" width="150" alt="Кофейное растение: Типика"></a></td>
+      <td><a href="#order" onclick="chooseCoffee('Типика')">В корзину</a></td>
+    </tr>
+    <tr>
+      <td>Бурбон</td>
+      <td>Разновидность арабики, от которой произошла Катурра.</td>
+      <td><a href="images/bourbon.jpg" target="_blank" rel="noopener"><img src="images/bourbon.jpg" width="150" alt="Кофейное растение: Бурбон"></a></td>
+      <td><a href="#order" onclick="chooseCoffee('Бурбон')">В корзину</a></td>
+    </tr>
+    <tr>
+      <td>Катурра</td>
+      <td>Компактная разновидность, возникшая как естественная мутация Бурбона.</td>
+      <td><a href="images/caturra.jpg" target="_blank" rel="noopener"><img src="images/caturra.jpg" width="150" alt="Кофейное растение: Катурра"></a></td>
+      <td><a href="#order" onclick="chooseCoffee('Катурра')">В корзину</a></td>
+    </tr>
+  </table>
+  
+  <p>Источник описаний и фотографий: <a href="https://varieties.worldcoffeeresearch.org/" target="_blank" rel="noopener">World Coffee Research</a>. Нажмите на фотографию, чтобы открыть её в новой вкладке.</p>
+  <h2 id="types">Виды кофе и разновидности арабики</h2>
+  <ul>
+    <li>Арабика
+      <ul>
+        <li>Типика (Typica)</li>
+        <li>Бурбон (Bourbon)</li>
+        <li>Катурра (Caturra)</li>
+      </ul>
+    </li>
+    <li>Робуста — распространённое название кофе вида Coffea canephora.</li>
+  </ul>
+  <h2 id="order">Корзина для дегустации</h2>
+  <p id="cart-status" aria-live="polite">Выберите сорт в таблице или укажите его здесь.</p>
+  <p>Это учебная корзина. После отправки формы ответ httpbin.org откроется в новой вкладке.</p>
+  <form action="https://httpbin.org/post" method="post" target="_blank" onreset="resetCoffee()">
+    <input type="hidden" name="form_type" value="coffee_tasting">
+    <label>Разновидность <input type="text" id="coffee-variety" name="coffee_variety" value="Бурбон" required></label><br>
+    <label>Количество пачек по 100 г <input type="number" name="pack_count" value="2" min="1" max="10" required></label><br>
+    <fieldset><legend>Помол</legend>
+      <label><input type="radio" name="grind" value="whole_bean" checked> В зёрнах</label><br>
+      <label><input type="radio" name="grind" value="filter"> Для фильтра</label>
+    </fieldset>
+    <label><input type="checkbox" name="tasting_card" value="yes" checked> Добавить карточку для заметок</label><br>
+    <label>Дата дегустации <input type="date" name="tasting_date" value="2026-11-03" required></label><br>
+    <label>Учебный код набора <input type="password" name="tasting_code" value="atlas123" required></label><br>
+    <p>Для этой формы используйте учебный код atlas123.</p>
+    <button type="submit">Отправить набор</button>
+    <button type="reset">Вернуть исходные значения</button>
+  </form>
+  <p><a href="#top">К началу страницы ↑</a></p>
+</main>
+<footer>Атлас кофе · Сабирова Мария Султановна · Группа 2511 · КР 1</footer>
+
+<script src="order.js"></script>
+</body>
+</html>

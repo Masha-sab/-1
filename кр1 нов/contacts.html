@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Обратная связь | Атлас кофе</title>
+</head>
+<body id="top">
+<header>
+  <a href="index.html">Атлас кофе</a>
+  <p>Учебный сайт о кофе</p>
+</header>
+<nav aria-label="Главное меню">
+  <a href="index.html"><img src="images/coffee-small.jpg" width="60" alt="На главную"></a><br>
+  <a href="index.html">Главная</a> ·
+  <a href="menu.html">Сорта кофе</a> ·
+  <a href="gallery.html">Галерея</a> ·
+  <a href="contacts.html" aria-current="page"><b>Контакты</b></a> ·
+  <a href="dom.html">Чтение DOM</a> ·
+  <a href="passport.html">Паспорт</a> ·
+  <a href="task.html">Задача 1010</a> ·
+  <a href="menu.html#order">Корзина</a> ·
+  <a href="https://varieties.worldcoffeeresearch.org/" target="_blank" rel="noopener">Каталог WCR ↗</a>
+</nav>
+<main>
+  <h1>Обратная связь</h1>
+  <p><a href="#about">Об авторе</a> · <a href="#contact-form">Написать</a></p>
+  <h2 id="about">Об авторе проекта</h2>
+  <p>Я Мария Сабирова из группы 2511. Я сделала этот сайт для контрольной работы по основам прикладного программирования.</p>
+  <h2 id="contact-form">Предложить тему о кофе</h2>
+  <p>Для проверки формы введите вымышленные контакты. Ответ httpbin.org откроется в новой вкладке.</p>
+  <form action="https://httpbin.org/post" method="post" target="_blank">
+    <label>Фамилия <input type="text" name="surname" required></label><br>
+    <label>Имя <input type="text" name="first_name" required></label><br>
+    <label>Группа <input type="text" name="group" value="2511" required></label><br>
+    <label>Мобильный телефон <input type="tel" name="phone" autocomplete="tel" required></label><br>
+    <label>Электронная почта <input type="email" name="email" autocomplete="email" required></label><br>
+    <label>Дата сообщения <input type="date" name="message_date" required></label><br>
+    <label>Предложение <input type="text" name="topic_suggestion" value="Хочу узнать больше о разновидностях арабики."></label><br>
+    <button type="submit">Отправить предложение</button>
+  </form>
+  <p><a href="#top">К началу страницы ↑</a></p>
+</main>
+<footer>Атлас кофе · Сабирова Мария Султановна · Группа 2511 · КР 1</footer>
+</body>
+</html>

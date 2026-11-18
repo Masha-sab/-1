@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Проверка числа на отрезке | Атлас кофе</title>
+</head>
+<body id="top">
+<header>
+  <a href="index.html">Атлас кофе</a>
+  <p>Учебный сайт о кофе</p>
+</header>
+<nav aria-label="Главное меню">
+  <a href="index.html"><img src="images/coffee-small.jpg" width="60" alt="На главную"></a><br>
+  <a href="index.html">Главная</a> ·
+  <a href="menu.html">Сорта кофе</a> ·
+  <a href="gallery.html">Галерея</a> ·
+  <a href="contacts.html">Контакты</a> ·
+  <a href="dom.html">Чтение DOM</a> ·
+  <a href="passport.html">Паспорт</a> ·
+  <a href="task.html" aria-current="page"><b>Задача 1010</b></a> ·
+  <a href="menu.html#order">Корзина</a> ·
+  <a href="https://varieties.worldcoffeeresearch.org/" target="_blank" rel="noopener">Каталог WCR ↗</a>
+</nav>
+<main>
+  <h1>Проверка числа на отрезке</h1>
+  <p><a href="#condition">Условие</a> · <a href="#solution">Решение</a></p>
+  <h2 id="condition">Задача 1010</h2>
+  <p>Проверьте, лежит ли число X на отрезке [a, b].</p>
+  <p>Числа a и b тоже входят в отрезок.</p>
+  <h2 id="solution">Проверка числа</h2>
+  <form action="https://httpbin.org/post" method="post" target="_blank" onsubmit="return solveTask()" oninput="clearResult()">
+    <input type="hidden" name="task_number" value="1010">
+    <input type="hidden" name="formulation" value="Дано X. Принадлежит ли X промежутку [a, b]?">
+    <label>Число X <input id="x" type="number" name="x" step="any" value="5" required></label><br>
+    <label>Левая граница a <input id="a" type="number" name="a" step="any" value="1" required></label><br>
+    <label>Правая граница b <input id="b" type="number" name="b" step="any" value="10" required></label><br>
+    <label>Результат <input id="result" type="text" name="result" readonly></label><br>
+    <button type="button" onclick="solveTask()">Проверить</button>
+    <button type="submit">Проверить и отправить</button>
+  </form>
+  <p id="answer" aria-live="polite">Введите числа и нажмите «Проверить».</p>
+  <p>Например, число 5 входит в отрезок [1, 10].</p>
+  <p><a href="#top">К началу страницы</a></p>
+</main>
+<footer>Атлас кофе · Сабирова Мария Султановна · Группа 2511 · КР 1</footer>
+<script src="task.js"></script>
+</body>
+</html>

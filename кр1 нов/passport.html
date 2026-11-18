@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ФИО латиницей | Атлас кофе</title>
+</head>
+<body id="top">
+<header>
+  <a href="index.html">Атлас кофе</a>
+  <p>Учебный сайт о кофе</p>
+</header>
+<nav aria-label="Главное меню">
+  <a href="index.html"><img src="images/coffee-small.jpg" width="60" alt="На главную"></a><br>
+  <a href="index.html">Главная</a> ·
+  <a href="menu.html">Сорта кофе</a> ·
+  <a href="gallery.html">Галерея</a> ·
+  <a href="contacts.html">Контакты</a> ·
+  <a href="dom.html">Чтение DOM</a> ·
+  <a href="passport.html" aria-current="page"><b>Паспорт</b></a> ·
+  <a href="task.html">Задача 1010</a> ·
+  <a href="menu.html#order">Корзина</a> ·
+  <a href="https://varieties.worldcoffeeresearch.org/" target="_blank" rel="noopener">Каталог WCR ↗</a>
+</nav>
+<main>
+  <h1>ФИО латиницей</h1>
+  <p><a href="#passport">Макет паспорта</a> · <a href="#change">Переключить написание</a></p>
+  <p>Учебный макет паспорта. Данные о выдаче и номер вымышлены.</p>
+  <section id="passport">
+    <h2>Страница 2</h2>
+    <p>Паспорт выдан: УЧЕБНЫЙ ОТДЕЛ</p>
+    <p>Дата выдачи: 01.03.2022 · Код подразделения: 000-000</p>
+    <p>Серия и номер: 0000 000000</p>
+    <h2>Страница 3</h2>
+    <p>Фамилия: <span id="surname">Сабирова</span></p>
+    <p>Имя: <span id="first-name">Мария</span></p>
+    <p>Отчество: <span id="patronymic">Султановна</span></p>
+    <p>Дата рождения: 28.02.<span id="birth-year">2008</span></p>
+    <p>Пол: женский · Место рождения: учебный город</p>
+  </section>
+  <h2 id="change">Кириллица и латиница</h2>
+  <button type="button" onclick="changePassport()">Показать латиницей</button>
+  <button type="button" onclick="restorePassport()">Вернуть кириллицу</button>
+  <p>Кнопки меняют написание фамилии, имени и отчества в макете.</p>
+  <p><a href="#top">К началу страницы ↑</a></p>
+</main>
+<footer>Атлас кофе · Сабирова Мария Султановна · Группа 2511 · КР 1</footer>
+<script src="passport.js"></script>
+</body>
+</html>
